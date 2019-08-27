@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <style>
+            table, th, td {
+            border: 2px solid rgba(0, 162, 255, 0.938);
+            border-collapse: collapse;
+            } 
+            th, td {
+            padding: 15px;
+            }
+            table {
+            width: 100%; 
+            background-color: #87f3b8f5;
+            }
+            body{
+                background-color: rgb(168, 248, 166);
+            }
+        </style>
+    </head>
+
+
+   <body>
+        <a href = "/"  style= "color: cornflowerblue; font-size: 120%">Home </a><br>
+        <a href = "/addnewtaskw4"  style= "color: cornflowerblue; font-size: 120%">Add new task </a><br><br>
+       <table > 
+           <tr>  
+               <th>Name</th> 
+               <th>Due Date</th>
+               <th>Description</th>
+           </tr>
+              <% for (let i=0; i<taskDb.length;i++) { %>
+              <tr>
+                 <td><%=taskDb[i].taskname  %></td>
+                 <td>  <%=taskDb[i].taskdue  %></td>
+                 <td><%=taskDb[i].taskdescr %></td>
+              </tr>
+            <% } %>
+
+       </table>
+   </body>
+
+</html>
